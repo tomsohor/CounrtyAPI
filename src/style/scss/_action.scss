@@ -1,0 +1,168 @@
+.action {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  .search {
+    height: rem(56);
+    width: rem(480);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc;
+    padding: rem(18) rem(33);
+
+    @include breakpoint-down(medium) {
+      width: 100%;
+      margin-bottom: rem(50);
+    }
+
+    &__icon {
+      margin-right: rem(24);
+      color: $dg;
+      scale: 1.5;
+    }
+
+    &__input {
+      width: 100%;
+      outline: none;
+      border: none;
+      &::placeholder {
+        font-size: rem(15);
+      }
+    }
+  }
+
+  .filter {
+    &__show {
+      height: rem(56);
+      width: rem(202);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 rem(25);
+      box-shadow: 0 0 3px #ccc;
+      border-radius: 5px;
+
+      .icon {
+        scale: 1.5;
+        cursor: pointer;
+      }
+    }
+    .option {
+      display: none;
+      &__Show {
+        position: absolute;
+        top: rem(190);
+        width: rem(202);
+        height: rem(178);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: rem(22) rem(30);
+        background-color: $w;
+        box-shadow: 0 0 3px #ccc;
+        border-radius: 5px;
+        z-index: 1;
+        @include breakpoint-down(medium) {
+          top: rem(375);
+        }
+      }
+    }
+  }
+}
+
+//Dark Mode
+.actionDark {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  .search {
+    height: rem(56);
+    width: rem(480);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    // box-shadow: 0 0 3px #ccc;
+    padding: rem(18) rem(33);
+    background-color: $db;
+    @include breakpoint-down(medium) {
+      width: 100%;
+      margin-bottom: rem(50);
+    }
+
+    &__icon {
+      margin-right: rem(24);
+      color: $w;
+      scale: 1.5;
+    }
+
+    &__input {
+      width: 100%;
+      outline: none;
+      border: none;
+      background-color: $db;
+      color: $w;
+      font-size: rem(15);
+      &::placeholder {
+        font-size: rem(15);
+        color: $w;
+      }
+    }
+  }
+
+  .filter {
+    &__show {
+      height: rem(56);
+      width: rem(202);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 rem(25);
+      //   box-shadow: 0 0 3px #ccc;
+      border-radius: 5px;
+      background-color: $db;
+      color: $w;
+      font-weight: $m;
+      .icon {
+        scale: 1.5;
+        cursor: pointer;
+      }
+    }
+    .option {
+      display: none;
+      &__Show {
+        position: absolute;
+        top: rem(190);
+        width: rem(202);
+        height: rem(178);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: rem(22) rem(30);
+        // box-shadow: 0 0 3px rgb(2, 2, 2);
+        border-radius: 5px;
+        background-color: $db;
+        z-index: 1;
+        @include breakpoint-down(medium) {
+          top: rem(375);
+        }
+        a {
+          color: $w;
+          font-weight: $m;
+        }
+      }
+    }
+  }
+}

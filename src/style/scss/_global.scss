@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Nunito Sans";
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.App {
+  .content {
+    padding-left: rem(32);
+    padding-right: rem(32);
+    @include breakpoint-up(large) {
+      padding-left: rem(80);
+      padding-right: rem(80);
+    }
+  }
+
+  .contentDark {
+    background-color: $vdb;
+    padding-left: rem(32);
+    padding-right: rem(32);
+    @include breakpoint-up(large) {
+      padding-left: rem(80);
+      padding-right: rem(80);
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.navbar {
+  height: rem(80);
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(28);
+  padding-left: rem(80);
+  padding-right: rem(80);
+  box-shadow: 0 0 10px #ccc;
+
+  @include breakpoint-down(medium) {
+    height: rem(160);
+    padding-left: rem(32);
+    padding-right: rem(32);
+    padding-top: rem(70);
+  }
+
+  .title {
+    cursor: pointer;
+    font-size: rem(18);
+    font-weight: $h;
+    height: rem(18);
+  }
+  .switcher {
+    width: rem(105);
+    height: rem(16);
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding-top: rem(5);
+    cursor: pointer;
+    @include breakpoint-down(small) {
+      justify-content: right;
+    }
+
+    .icon {
+      font-weight: $m;
+    }
+
+    .label {
+      font-weight: $m;
+
+      @include breakpoint-down(small) {
+        font-size: rem(14);
+        margin-left: rem(5);
+      }
+    }
+  }
+}
+
+.navbarDark {
+  height: rem(80);
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(28);
+  padding-left: rem(80);
+  padding-right: rem(80);
+  box-shadow: 0 0 10px #ccc;
+  background-color: $db;
+
+  @include breakpoint-down(medium) {
+    height: rem(160);
+    padding-left: rem(32);
+    padding-right: rem(32);
+    padding-top: rem(70);
+  }
+
+  .title {
+    cursor: pointer;
+    font-size: rem(18);
+    font-weight: $h;
+    height: rem(18);
+    color: $w;
+  }
+  .switcher {
+    width: rem(105);
+    height: rem(16);
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding-top: rem(5);
+    cursor: pointer;
+    @include breakpoint-down(small) {
+      justify-content: right;
+    }
+
+    .icon {
+      font-weight: $m;
+      color: $w;
+    }
+
+    .label {
+      font-weight: $m;
+      color: $w;
+      @include breakpoint-down(small) {
+        font-size: rem(14);
+        margin-left: rem(3);
+      }
+    }
+  }
+}
